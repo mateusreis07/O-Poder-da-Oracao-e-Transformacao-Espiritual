@@ -911,6 +911,44 @@ footer {
     margin: 20px auto 0;
 }
 
+/* WhatsApp Float Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: pulse-green 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+@keyframes pulse-green {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
 /* Animations & Utilities */
 .fade-in {
     opacity: 0;
@@ -930,6 +968,16 @@ footer {
     .flex-row { flex-direction: column; }
     .current-price span { font-size: 3rem; }
     .cta-button { padding: 15px 20px; font-size: 1rem; }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+    }
+    
+    .gallery-placeholder {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
     
     .bonus-grid {
         grid-template-columns: 1fr;
