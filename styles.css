@@ -279,25 +279,14 @@ section h2 {
     justify-content: center;
 }
 
-.img-placeholder {
+.producer-photo {
     width: 300px;
     height: 300px;
     border-radius: 50%;
     border: 4px solid var(--color-gold);
     box-shadow: 0 0 20px rgba(201, 151, 58, 0.3);
-    background: linear-gradient(135deg, #1A2242 0%, #0A0E1F 100%);
-    position: relative;
-}
-
-.img-placeholder::after {
-    content: 'Foto João Reis';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--color-gold);
-    opacity: 0.5;
-    font-family: var(--font-heading);
+    object-fit: cover;
+    object-position: top center;
 }
 
 .producer-content {
@@ -346,19 +335,11 @@ section h2 {
     position: relative;
 }
 
-.gallery-placeholder {
+.gallery-image {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #1A2242 0%, #05070F 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-gold);
-    font-family: var(--font-heading);
-    font-weight: 600;
-    opacity: 0.6;
-    text-align: center;
-    padding: 20px;
+    object-fit: cover;
+    display: block;
 }
 
 /* Modules Section */
@@ -972,11 +953,6 @@ footer {
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 15px !important;
-    }
-    
-    .gallery-placeholder {
-        font-size: 0.9rem;
-        padding: 10px;
     }
     
     .bonus-grid {
